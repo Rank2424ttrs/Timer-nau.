@@ -1,0 +1,31 @@
+
+<!-- saved from url=(0071)file:///C:/Users/81909/source/repos/java%E8%AA%B2%E9%A1%8C/HTMLPage.htm -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+</head>
+<body>
+<span id="view_clock">2019ねん7がつ7にち21じ27ふん36びょう</span>
+<title>とけいのやつ</title>
+
+<script type="text/javascript">
+    timerID = setInterval('clock()',500); //0.5秒毎にclock()を実行
+
+    function clock() {
+    document.getElementById("view_clock").innerHTML = getNow();
+    }
+
+    function getNow() {
+    var now = new Date();
+    var year = now.getFullYear();
+    var mon = now.getMonth()+1; //１を足すこと
+    var day = now.getDate();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var sec = now.getSeconds();
+
+    //出力用
+    var s = year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒";
+    return s;
+    }
+</script></body></html>
